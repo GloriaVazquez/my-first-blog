@@ -6,8 +6,11 @@
     <div>
       <h1><a href="/">Matemáticas con Gloria</a></h1>
       </div>
+        {% for post in posts %}
       <div>
-        <h2><a href="/">Aprende Matemáticas</a></h2>
-        </div>
+        <p>publicado: {{ post.published_date }}</p>
+          <h1><a href= "">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }} </p>
+    </div>{% endfor %}
 </body>
 </html>
